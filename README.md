@@ -1,3 +1,7 @@
+# LA MAGDALENA OS 1.8.0 · Alfalfa Enterprise
+
+La versión estable incorpora gestión integral de producción de alfalfa, costos, stock, ventas, margen y proyección anual.
+
 # LA MAGDALENA OS
 
 Repositorio unificado de la aplicación móvil Expo, la web pública y el esquema Supabase.

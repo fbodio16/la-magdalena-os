@@ -1,3 +1,5 @@
-const CACHE='lmos-web-v13';
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./','./index.html','./manifest.webmanifest']))));
-self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));
+const CACHE='lmos-web-v170-alfalfa-enterprise';
+const ASSETS=['./','./index.html','./manifest.webmanifest','./css/styles.css','./css/modules/lots.css','./js/app.js','./js/modules/lots.js','./js/modules/gis/index.js','./js/modules/production/index.js','./js/modules/lots/index.js','./js/modules/lots/lots-page.js','./js/modules/lots/lot-form.js','./js/modules/lots/lot-detail.js','./js/modules/lots/lot-filters.js','./js/modules/lots/lot-activities.js','./js/services/lots-service.js'];
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})()));
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;event.respondWith(fetch(event.request).then(response=>{const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));return response}).catch(()=>caches.match(event.request))) });
