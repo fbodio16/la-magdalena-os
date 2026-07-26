@@ -9,7 +9,7 @@ import { createPurchasesModule } from './modules/purchases/index.js'
 import { createFinanceModule } from './modules/finance/index.js'
 import { createDataSafetyModule } from './modules/data-safety/index.js'
 const sb=createClient('https://grlifamrkdoffglvrttu.supabase.co','sb_publishable_NlFza1aVKzhWh2Xiwm0VGQ_wI1aPdTN')
-const APP_VERSION='7.2.0';
+const APP_VERSION='7.2.1';
 const APP_RELEASE='Frontend consolidado';
 const S={session:null,companies:[],companyId:'',lots:[],geometries:[],analyses:[],orders:[],clients:[],irrigations:[],cuts:[],trips:[],movements:[],modules:[],members:[],invitations:[],membership:null,weather:null,page:'operations',map:null,drawn:null,selectedLotId:''};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function applyReleaseIdentity(){
@@ -38,7 +38,6 @@ async function showApp(session){
     const retry=$('#retryLoad'); if(retry) retry.onclick=()=>showApp(session);
   }
 }
-$('#loginForm').onsubmit=async e=>{e.preventDefault();const m=$('#loginMsg');m.classList.add('hidden');const {error}=await sb.auth.signInWithPassword({email:$('#email').value.trim(),password:$('#password').value});if(error){m.textContent=error.message;m.classList.remove('hidden')}};
 $('#signupBtn').onclick=async()=>{const m=$('#loginMsg'),email=$('#email').value.trim(),password=$('#password').value;m.classList.add('hidden');if(!email||password.length<6){m.textContent='Ingresá un correo y una contraseña de al menos 6 caracteres.';m.classList.remove('hidden');return}const {error}=await sb.auth.signUp({email,password,options:{data:{full_name:'Franco Luciano Bodio'}}});m.textContent=error?error.message:'Cuenta creada. Si Supabase solicita confirmación, revisá tu correo.';m.classList.remove('hidden')};
 $('#resetBtn').onclick=async()=>{const m=$('#loginMsg'),email=$('#email').value.trim();m.classList.add('hidden');if(!email){m.textContent='Ingresá tu correo primero.';m.classList.remove('hidden');return}const {error}=await sb.auth.resetPasswordForEmail(email);m.textContent=error?error.message:'Se envió el enlace de recuperación al correo.';m.classList.remove('hidden')};
 $('#logout').onclick=()=>sb.auth.signOut();$('#menuBtn').onclick=()=>$('#side').classList.toggle('open');$('#nav').onclick=e=>{const b=e.target.closest('button[data-page]');if(!b)return;S.page=b.dataset.page;document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('active',x===b));$('#side').classList.remove('open');render()};$('#companySelect').onchange=async e=>{S.companyId=e.target.value;await loadData();await loadWeather();render()}
@@ -203,6 +202,5 @@ const transportModule=createTransportModule({state:S,supabase:sb,escapeHtml:esc,
 const operationsModule=createOperationsModule({state:S,escapeHtml:esc,render,setPage:(page)=>{S.page=page;document.querySelectorAll('#nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));render();}});
 const lotsModule=createLotsModule({state:S,supabase:sb,select:$,escapeHtml:esc,totalHa,latest,vigor,openModal:modal,openOrder:orderModal,loadData,render});
 const gisModule=createGisModule({state:S,supabase:sb,select:$,escapeHtml:esc,number,hectares,shortDate,latest,loadData,render,orderModal,openLotDetails:lot=>lotsModule.openDetails(lot)});
-async function verifyBackend(){const state=$('#connectionState');try{const {error}=await sb.from('companies').select('id',{count:'exact',head:true});if(error)throw error;state.textContent='✓ Supabase conectado y base disponible';state.style.background='#e8f7ee';state.style.color='#126047'}catch(e){state.textContent='No se pudo conectar: '+(e?.message||e);state.style.background='#ffeaea';state.style.color='#9b2525'}}
-verifyBackend();
+
 init().catch(e=>{console.error(e);const m=$('#loginMsg');m.textContent='Error al iniciar: '+e.message;m.classList.remove('hidden')})
