@@ -1,8 +1,8 @@
 const CACHE='lmos-web-v721-login-estable';
 const ASSETS=[
   './','./index.html','./manifest.webmanifest',
-  './css/styles.css?v=8.0.0','./css/modules/lots.css?v=8.0.0',
-  './js/app.js?v=8.0.0',
+  './css/styles.css?v=9.0.0','./css/modules/lots.css?v=9.0.0',
+  './js/app.js?v=9.0.0',
   './js/modules/lots.js','./js/modules/gis/index.js','./js/modules/production/index.js',
   './js/modules/transport/index.js','./js/modules/operations/index.js','./js/modules/sales/index.js',
   './js/modules/purchases/index.js','./js/modules/finance/index.js','./js/modules/data-safety/index.js'
