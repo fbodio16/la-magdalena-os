@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '19.0.0';
+  const VERSION = '20.5.0';
   const show = (title, detail) => {
     let box = document.getElementById('lmos-boot-error');
     if (!box) {

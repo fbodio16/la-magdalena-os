@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-const version='19.0.0';
+const version='20.1.0';
 const index=readFileSync('apps/web/index.html','utf8');
 const app=readFileSync('apps/web/js/app.js','utf8');
 const required=[

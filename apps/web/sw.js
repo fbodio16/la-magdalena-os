@@ -1,9 +1,9 @@
-const CACHE='lmos-web-v1900-hydric-intelligence';
+const CACHE='lmos-v20-1-0-field-book-360';
 const ASSETS=[
   './','./index.html','./manifest.webmanifest',
-  './css/styles.css?v=15.0.0','./css/modules/lots.css?v=15.0.0',
-  './js/app.js?v=15.0.0',
-  './js/modules/lots.js','./js/modules/gis/index.js','./js/modules/production/index.js',
+  './css/styles.css?v=20.1.0','./css/modules/lots.css?v=20.1.0','./css/modules/field-book.css?v=20.1.0',
+  './js/app.js?v=20.1.0',
+  './js/modules/lots.js','./js/modules/field-book/index.js','./js/modules/gis/index.js','./js/modules/production/index.js',
   './js/modules/transport/index.js','./js/modules/operations/index.js','./js/modules/sales/index.js',
   './js/modules/purchases/index.js','./js/modules/resources/index.js','./js/modules/finance/index.js','./js/modules/data-safety/index.js','./js/modules/establishment/index.js'
 ];

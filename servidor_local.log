@@ -1,0 +1,11 @@
+::1 - - [26/Jul/2026 11:24:07] "GET /?version=3.0.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /css/modules/lots.css?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /css/styles.css?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /css/modules/field-book.css?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/auth.js?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/boot-guard.js?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/app.js?v=20.5.0 HTTP/1.1" 200 -
+::1 - - [26/Jul/2026 11:24:07] "GET /manifest.webmanifest HTTP/1.1" 304 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/modules/integration-engine/index.js HTTP/1.1" 304 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/modules/hydric-intelligence/index.js HTTP/1.1" 304 -
+::1 - - [26/Jul/2026 11:24:07] "GET /js/modules/field-book/index.js HTTP/1.1" 200 -
