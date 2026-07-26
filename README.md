@@ -48,3 +48,7 @@ La base ya está preparada. No ejecutar nuevamente `001_initial_schema.sql` sobr
 - No existe ninguna referencia a `numberAR` en `apps/mobile/App.js`.
 - La sintaxis de `App.js` fue verificada con Node.
 - La web contiene `index.html`, `vercel.json`, manifiesto y service worker.
+
+
+## Versión 7.2.0
+Frontend consolidado y mecanismo de actualización de caché para producción en Vercel.

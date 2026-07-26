@@ -202,7 +202,7 @@ export function createProductionModule({ state, supabase, select, escapeHtml, op
 
   function openCutEditor(seed={}) {
     const today=new Date().toISOString().slice(0,10), year=today.slice(0,4), defaultLotId=seed.lot_id||state.lots.find(l=>String(l.crop||'').toLowerCase().includes('alfalfa'))?.id||'';
-    openModal(`<p class="eyebrow">PRODUCCIÓN DEFINITIVA · 7.1.0</p><h2>Registrar nuevo corte</h2><form id="cutForm" class="production-cut-form"><div class="production-editor-layout"><div class="production-editor-fields"><div class="form-grid">
+    openModal(`<p class="eyebrow">PRODUCCIÓN CONSOLIDADA · 7.2.0</p><h2>Registrar nuevo corte</h2><form id="cutForm" class="production-cut-form"><div class="production-editor-layout"><div class="production-editor-fields"><div class="form-grid">
     <label>Fecha<input name="cut_date" type="date" value="${today}" required></label><label>Campaña<input name="campaign" value="${year}" required></label>
     <label>Lote<select name="lot_id" id="cutLot" required><option value="">Seleccionar lote</option>${state.lots.filter(l=>String(l.crop||'').toLowerCase().includes('alfalfa')).map(l=>`<option value="${l.id}" data-ha="${Number(l.hectares||l.area_ha||0)}" ${defaultLotId===l.id?'selected':''}>${escapeHtml(l.name)} · ${number(l.hectares||l.area_ha,2)} ha</option>`).join('')}</select></label>
     <label>Número de corte<input name="cut_number" type="number" min="1" max="20" value="1" required></label><label>Cortes previstos/año<input name="expected_cuts_year" type="number" min="1" max="20" value="10"></label><label>Superficie cortada (ha)<input id="cutHa" name="hectares" type="number" min="0.1" step="0.01" required></label>

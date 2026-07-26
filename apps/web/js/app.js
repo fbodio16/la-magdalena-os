@@ -9,8 +9,17 @@ import { createPurchasesModule } from './modules/purchases/index.js'
 import { createFinanceModule } from './modules/finance/index.js'
 import { createDataSafetyModule } from './modules/data-safety/index.js'
 const sb=createClient('https://grlifamrkdoffglvrttu.supabase.co','sb_publishable_NlFza1aVKzhWh2Xiwm0VGQ_wI1aPdTN')
-const S={session:null,companies:[],companyId:'',lots:[],geometries:[],analyses:[],orders:[],clients:[],irrigations:[],cuts:[],trips:[],movements:[],modules:[],members:[],invitations:[],membership:null,weather:null,page:'dashboard',map:null,drawn:null,selectedLotId:''};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-async function init(){const {data}=await sb.auth.getSession();if(data.session)await showApp(data.session);sb.auth.onAuthStateChange(async(_e,s)=>s?showApp(s):showLogin())}
+const APP_VERSION='7.2.0';
+const APP_RELEASE='Frontend consolidado';
+const S={session:null,companies:[],companyId:'',lots:[],geometries:[],analyses:[],orders:[],clients:[],irrigations:[],cuts:[],trips:[],movements:[],modules:[],members:[],invitations:[],membership:null,weather:null,page:'operations',map:null,drawn:null,selectedLotId:''};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function applyReleaseIdentity(){
+  document.title=`LA MAGDALENA OS · ${APP_VERSION} · ${APP_RELEASE}`;
+  const eyebrow=document.querySelector('.top .eyebrow');
+  if(eyebrow) eyebrow.textContent=`LA MAGDALENA OS · ${APP_VERSION}`;
+  const brand=document.querySelector('.brand small');
+  if(brand) brand.textContent=`OS · ${APP_VERSION} · OPERATIVO`;
+}
+async function init(){applyReleaseIdentity();const {data}=await sb.auth.getSession();if(data.session)await showApp(data.session);sb.auth.onAuthStateChange(async(_e,s)=>s?showApp(s):showLogin())}
 function showLogin(){$('#login').classList.remove('hidden');$('#app').classList.add('hidden')}
 async function showApp(session){
   S.session=session;
