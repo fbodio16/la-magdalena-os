@@ -140,3 +140,22 @@
 .modal-actions{display:flex;justify-content:flex-end;gap:9px}
 @media(max-width:900px){.field-ops-kpis{grid-template-columns:repeat(2,1fr)}.field-ops-grid{grid-template-columns:1fr}.quick-access-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.field-ops-hero{align-items:flex-start;flex-direction:column}.field-ops-actions{justify-content:flex-start;width:100%}.field-ops-actions button{flex:1}.field-ops-kpis{grid-template-columns:repeat(2,1fr)}.field-task-card,.field-observation-card{grid-template-columns:auto 1fr}.field-task-card>button:last-child,.field-observation-card>button:last-child{grid-column:2;justify-self:start}.quick-access-grid,.quick-record-modal{grid-template-columns:1fr}}
+
+
+/* v21.0.0 — Operación Real */
+.operation-real-page{display:grid;gap:18px}
+.operation-real-hero{display:flex;justify-content:space-between;gap:20px;align-items:center;background:linear-gradient(135deg,#0c4d38,#24815e);color:#fff;padding:27px;border-radius:20px}
+.operation-real-hero h2{font-size:34px;margin:4px 0}.operation-real-hero p{margin:0;opacity:.85}
+.operation-readiness-score{min-width:180px;text-align:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:18px;border-radius:15px}.operation-readiness-score small,.operation-readiness-score span{display:block}.operation-readiness-score b{display:block;font-size:38px}
+.operation-real-actions{display:flex;gap:10px;flex-wrap:wrap}
+.operation-readiness-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.operation-readiness-card{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:13px;align-items:center;border:1px solid #dfe8e2;border-radius:14px;padding:14px;background:#fff}
+.readiness-icon{width:42px;height:42px;border-radius:12px;background:#edf5f0;display:grid;place-items:center;font-size:22px}
+.readiness-heading{display:flex;justify-content:space-between;gap:10px}.readiness-heading span{font-size:11px;color:#6d7b72}.readiness-content strong{display:block;font-size:21px;margin-top:3px}.readiness-content small{color:#718077}
+.readiness-bar{height:7px;background:#e6ede8;border-radius:99px;overflow:hidden;margin-top:8px}.readiness-bar i{display:block;height:100%;background:#1d7a57;border-radius:99px}
+.operation-real-columns{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.operational-profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.operational-profile-grid div{background:#f3f7f4;border-radius:11px;padding:13px}.operational-profile-grid small{display:block;color:#6e7b73}.operational-profile-grid b{display:block;margin-top:5px}
+.operation-today{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}.operation-today div{background:#f3f7f4;border-radius:11px;padding:12px;text-align:center}.operation-today span,.operation-today b,.operation-today small{display:block}.operation-today b{font-size:24px;margin:3px 0}.full{width:100%}
+.operation-checklist{display:grid;gap:10px;margin-top:12px}.operation-checklist article{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid #e0e8e3;border-radius:13px;padding:13px}.operation-checklist article>span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#fff0d0;color:#8a6200;font-weight:900}.operation-checklist article.done>span{background:#dff2e7;color:#14704d}.operation-checklist p{margin:3px 0 0;color:#718077}
+@media(max-width:900px){.operation-real-columns{grid-template-columns:1fr}.operation-readiness-grid{grid-template-columns:1fr}.operational-profile-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.operation-real-hero{align-items:flex-start;flex-direction:column}.operation-readiness-score{width:100%;box-sizing:border-box}.operation-readiness-card{grid-template-columns:42px 1fr}.operation-readiness-card>button{grid-column:2;justify-self:start}.operational-profile-grid{grid-template-columns:1fr}.operation-today{grid-template-columns:1fr}.operation-checklist article{grid-template-columns:34px 1fr}.operation-checklist article>button{grid-column:2;justify-self:start}}

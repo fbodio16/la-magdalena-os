@@ -1,7 +1,7 @@
 {
   "name": "la-magdalena-os",
   "private": true,
-  "version": "20.6.0",
+  "version": "21.0.0",
   "scripts": {
     "mobile": "cd apps/mobile && npm install && npx expo start --clear",
     "web:local": "cd apps/web && python3 -m http.server 8080",
