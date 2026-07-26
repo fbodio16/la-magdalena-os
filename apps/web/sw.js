@@ -1,4 +1,4 @@
-const CACHE='lmos-web-v1500-establishment';
+const CACHE='lmos-web-v1900-hydric-intelligence';
 const ASSETS=[
   './','./index.html','./manifest.webmanifest',
   './css/styles.css?v=15.0.0','./css/modules/lots.css?v=15.0.0',
