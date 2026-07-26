@@ -1,13 +1,13 @@
 {
   "name": "la-magdalena-os",
   "private": true,
-  "version": "13.0.0",
+  "version": "15.0.0",
   "scripts": {
     "mobile": "cd apps/mobile && npm install && npx expo start --clear",
     "web:local": "cd apps/web && python3 -m http.server 8080",
     "web:deploy": "cd apps/web && npx --yes vercel@latest --prod",
     "web:start": "cd apps/web && python3 -m http.server 8080",
-    "check:web": "node --check apps/web/js/app.js && node --check apps/web/js/modules/production/index.js && node --check apps/web/js/modules/gis/index.js && node --check apps/web/js/modules/lots/index.js && node --check apps/web/js/modules/finance/index.js && node --check apps/web/js/modules/campaigns/index.js",
+    "check:web": "node --check apps/web/js/app.js && node --check apps/web/js/modules/production/index.js && node --check apps/web/js/modules/gis/index.js && node --check apps/web/js/modules/lots/index.js && node --check apps/web/js/modules/finance/index.js && node --check apps/web/js/modules/campaigns/index.js && node --check apps/web/js/modules/establishment/index.js",
     "dev:open": "open -a \"Visual Studio Code\" ."
   }
 }
