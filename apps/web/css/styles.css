@@ -85,3 +85,6 @@
 
 /* 6.1.0 · Cortes y stock */
 .detailStockMove,.cutMove{white-space:nowrap}.production-detail-grid+.status{margin-top:14px}
+
+/* Flujo de fondos 6.4 */
+.cash-chart{height:185px;display:flex;align-items:flex-end;gap:14px;padding:18px 4px 4px;border-bottom:1px solid var(--line,#dfe7e1);overflow-x:auto}.cash-month{min-width:72px;display:flex;flex-direction:column;align-items:center;gap:5px}.cash-month b{font-size:12px}.cash-bars{height:124px;display:flex;align-items:flex-end;gap:5px}.cash-bars i{display:block;width:20px;border-radius:6px 6px 2px 2px;background:#277a57}.cash-bars i+ i{background:#b76d42}.chart-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted,#617067)}
