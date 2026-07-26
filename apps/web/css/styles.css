@@ -159,3 +159,24 @@
 .operation-checklist{display:grid;gap:10px;margin-top:12px}.operation-checklist article{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid #e0e8e3;border-radius:13px;padding:13px}.operation-checklist article>span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#fff0d0;color:#8a6200;font-weight:900}.operation-checklist article.done>span{background:#dff2e7;color:#14704d}.operation-checklist p{margin:3px 0 0;color:#718077}
 @media(max-width:900px){.operation-real-columns{grid-template-columns:1fr}.operation-readiness-grid{grid-template-columns:1fr}.operational-profile-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.operation-real-hero{align-items:flex-start;flex-direction:column}.operation-readiness-score{width:100%;box-sizing:border-box}.operation-readiness-card{grid-template-columns:42px 1fr}.operation-readiness-card>button{grid-column:2;justify-self:start}.operational-profile-grid{grid-template-columns:1fr}.operation-today{grid-template-columns:1fr}.operation-checklist article{grid-template-columns:34px 1fr}.operation-checklist article>button{grid-column:2;justify-self:start}}
+
+
+/* v22.0.0 — Asistente Agronómico */
+.agronomic-assistant-page{display:grid;gap:18px}
+.assistant-hero{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:28px;border-radius:20px;background:linear-gradient(135deg,#0a4634,#1e7a58);color:#fff}
+.assistant-hero h2{font-size:34px;margin:4px 0}.assistant-hero p{margin:0;opacity:.86}
+.assistant-hero-score{min-width:190px;text-align:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:15px;padding:17px}
+.assistant-hero-score small,.assistant-hero-score span{display:block}.assistant-hero-score b{display:block;font-size:42px}
+.assistant-actions-top{display:flex;gap:10px;flex-wrap:wrap}
+.assistant-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.assistant-kpis article{background:#fff;border:1px solid #dfe8e2;border-radius:15px;padding:16px}.assistant-kpis small,.assistant-kpis span{display:block;color:#6d7a72}.assistant-kpis b{display:block;font-size:29px;margin:5px 0}
+.assistant-main-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.assistant-action-list,.assistant-alert-list{display:grid;gap:10px;margin-top:13px}
+.assistant-action{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid #dfe8e2;border-radius:13px;padding:13px}
+.assistant-action>span{width:34px;height:34px;border-radius:10px;background:#edf5f0;color:#176a4c;display:grid;place-items:center;font-weight:900}
+.assistant-action p,.assistant-alert p{margin:4px 0;color:#68756d}
+.assistant-alert{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:start;border:1px solid #e0e7e3;border-left:5px solid #d29a2a;border-radius:12px;padding:12px}.assistant-alert.alert-alta,.assistant-alert.alert-critica{border-left-color:#c44b3f}.assistant-alert em{font-size:11px;font-style:normal;text-transform:uppercase;font-weight:900;color:#6f7b74}
+.assistant-lot-table{overflow:auto;margin-top:14px}.assistant-lot-head,.assistant-lot-row{display:grid;grid-template-columns:minmax(170px,1.4fr) repeat(6,minmax(70px,.55fr)) minmax(80px,.5fr);gap:10px;align-items:center;min-width:900px;padding:12px 13px}.assistant-lot-head{background:#eef4f0;border-radius:10px;font-size:11px;font-weight:900;color:#68756d}.assistant-lot-row{border-bottom:1px solid #e2e9e5}.assistant-lot-row small{display:block;color:#758178;margin-top:3px}
+.assistant-disclaimer{background:#fff8e6;border:1px solid #efd99e;border-radius:12px;padding:13px;color:#735912}
+@media(max-width:900px){.assistant-main-grid{grid-template-columns:1fr}.assistant-kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.assistant-hero{align-items:flex-start;flex-direction:column}.assistant-hero-score{width:100%;box-sizing:border-box}.assistant-kpis{grid-template-columns:repeat(2,1fr)}.assistant-action{grid-template-columns:34px 1fr}.assistant-action>button{grid-column:2;justify-self:start}}
