@@ -50,5 +50,5 @@ La base ya está preparada. No ejecutar nuevamente `001_initial_schema.sql` sobr
 - La web contiene `index.html`, `vercel.json`, manifiesto y service worker.
 
 
-## Versión 7.2.1
+## Versión 7.2.2
 Frontend consolidado y mecanismo de actualización de caché para producción en Vercel.
