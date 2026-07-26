@@ -180,3 +180,17 @@
 .assistant-disclaimer{background:#fff8e6;border:1px solid #efd99e;border-radius:12px;padding:13px;color:#735912}
 @media(max-width:900px){.assistant-main-grid{grid-template-columns:1fr}.assistant-kpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.assistant-hero{align-items:flex-start;flex-direction:column}.assistant-hero-score{width:100%;box-sizing:border-box}.assistant-kpis{grid-template-columns:repeat(2,1fr)}.assistant-action{grid-template-columns:34px 1fr}.assistant-action>button{grid-column:2;justify-self:start}}
+
+
+/* v23.0.0 — Centro de Comando Multicultivo */
+.command-center-page{display:grid;gap:18px}
+.command-center-hero{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:27px;border-radius:20px;background:linear-gradient(135deg,#0c4936,#25805e);color:#fff}
+.command-center-hero h2{font-size:34px;margin:4px 0}.command-center-hero p{margin:0;opacity:.86}.command-hero-actions{display:flex;gap:9px;flex-wrap:wrap}
+.command-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.command-kpis article{background:#fff;border:1px solid #dfe8e2;border-radius:15px;padding:16px}.command-kpis small,.command-kpis span{display:block;color:#6e7b73}.command-kpis b{display:block;font-size:29px;margin:5px 0}
+.command-main-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.crop-cycle-list,.crop-planning-list{display:grid;gap:10px;margin-top:13px}
+.crop-cycle-card{display:grid;grid-template-columns:minmax(180px,1.3fr) .6fr .6fr auto;gap:12px;align-items:center;border:1px solid #dfe7e2;border-radius:13px;padding:13px}.crop-cycle-card small,.crop-cycle-card span{display:block;color:#718077}.crop-cycle-card b{display:block;margin:3px 0}
+.crop-catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:13px}.crop-catalog-grid article{display:flex;gap:10px;align-items:center;background:#f3f7f4;border-radius:12px;padding:13px}.crop-catalog-grid span{font-size:22px}.crop-catalog-grid small{display:block;color:#718077;margin-top:3px}
+.command-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.command-shortcuts button{border:1px solid #dfe8e2;background:#fff;border-radius:14px;padding:16px;text-align:left;font-size:24px;cursor:pointer}.command-shortcuts b,.command-shortcuts span{display:block}.command-shortcuts b{font-size:15px;margin-top:7px}.command-shortcuts span{font-size:12px;color:#718077;margin-top:3px}
+.modal-crop-list{display:grid;gap:7px;margin-top:16px;max-height:250px;overflow:auto}.modal-crop-list div{display:flex;justify-content:space-between;padding:9px 11px;background:#f3f7f4;border-radius:9px}.modal-crop-list span{color:#718077}
+@media(max-width:900px){.command-kpis{grid-template-columns:repeat(2,1fr)}.command-main-grid{grid-template-columns:1fr}.crop-catalog-grid,.command-shortcuts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.command-center-hero{align-items:flex-start;flex-direction:column}.crop-cycle-card{grid-template-columns:1fr 1fr}.crop-cycle-card>button{grid-column:1/-1;justify-self:start}.crop-catalog-grid,.command-shortcuts{grid-template-columns:1fr}}
