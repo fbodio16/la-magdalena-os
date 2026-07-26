@@ -91,3 +91,6 @@
 
 /* 7.0.0 · Seguridad e integridad */
 .readiness-list{display:grid;gap:10px}.readiness-item{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--line,#dbe4df);border-radius:12px}.readiness-item small{display:block;margin-top:3px;color:var(--muted,#60736b)}.readiness-icon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:#fff1d6;color:#8a5a00}.readiness-icon.ok{background:#e4f6eb;color:#126047}.data-issues{display:grid;gap:8px}.data-issues .status{margin:0}
+
+/* V10 · Gestión completa de cortes */
+.production-efficiency-summary{margin-top:-7px;background:linear-gradient(135deg,#f7fbf8,#eef7f2)}.production-efficiency-summary>div{border-color:#d3e6db}.production-form-section small{display:block;margin-top:5px;font-weight:500}.production-cut-form input[name=work_hours],.production-cut-form input[name=fuel_liters],.production-cut-form input[name=fuel_price_per_liter]{background:#fbfdfc}
