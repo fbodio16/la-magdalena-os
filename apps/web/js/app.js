@@ -10,8 +10,8 @@ import { createFinanceModule } from './modules/finance/index.js'
 import { createDataSafetyModule } from './modules/data-safety/index.js'
 import { createResourcesModule } from './modules/resources/index.js'
 const sb=createClient('https://grlifamrkdoffglvrttu.supabase.co','sb_publishable_NlFza1aVKzhWh2Xiwm0VGQ_wI1aPdTN')
-const APP_VERSION='11.0.0';
-const APP_RELEASE='Gestión comercial integrada';
+const APP_VERSION='12.0.0';
+const APP_RELEASE='Transporte y logística integrada';
 const S={session:null,companies:[],companyId:'',lots:[],geometries:[],analyses:[],orders:[],clients:[],irrigations:[],cuts:[],trips:[],movements:[],equipment:[],fuelEntries:[],maintenanceEntries:[],personnel:[],laborEntries:[],salesOrders:[],salesItems:[],salesPayments:[],stockMovements:[],modules:[],members:[],invitations:[],membership:null,weather:null,page:'operations',map:null,drawn:null,selectedLotId:''};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function applyReleaseIdentity(){
   document.title=`LA MAGDALENA OS · ${APP_VERSION} · ${APP_RELEASE}`;
