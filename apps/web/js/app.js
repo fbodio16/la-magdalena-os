@@ -24,7 +24,7 @@ import { createCommandCenterModule } from './modules/command-center/index.js'
 import { createCampaignPlanningModule } from './modules/campaign-planning/index.js'
 import { createCrmModule } from './modules/crm/index.js'
 const sb=createClient('https://grlifamrkdoffglvrttu.supabase.co','sb_publishable_NlFza1aVKzhWh2Xiwm0VGQ_wI1aPdTN')
-const APP_VERSION='26.1.1';
+const APP_VERSION='29.0.0';
 const APP_RELEASE='Gemelo Digital KML';
 const S={session:null,companies:[],companyId:'',lots:[],geometries:[],analyses:[],orders:[],clients:[],irrigations:[],cuts:[],trips:[],movements:[],equipment:[],fuelEntries:[],maintenanceEntries:[],personnel:[],laborEntries:[],salesOrders:[],salesItems:[],salesPayments:[],stockMovements:[],campaigns:[],decisionSettings:[],workTasks:[],inventoryItems:[],precisionObservations:[],labAnalyses:[],validationRuns:[],hydricProfiles:[],weatherStationObservations:[],gravimetricSamples:[],hydricDailyBalances:[],fieldTimelineEvents:[],fieldDocuments:[],fieldRecommendations:[],fieldObservations:[],dailyFieldTasks:[],operationalProfile:null,agronomicSnapshots:[],cropCatalog:[],cropSeasons:[],lotCropCycles:[],cropEconomicPlans:[],cropRotationRules:[],rotationPlanEntries:[],crmContacts:[],crmEstablishments:[],crmOpportunities:[],crmActivities:[],selectedCampaignId:'',modules:[],members:[],invitations:[],membership:null,weather:null,page:'dashboard',map:null,drawn:null,selectedLotId:''};const $=s=>document.querySelector(s);const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function applyReleaseIdentity(){
@@ -243,6 +243,6 @@ const operationRealModule=createOperationRealModule({state:S,supabase:sb,escapeH
 const fieldOperationsModule=createFieldOperationsModule({state:S,supabase:sb,escapeHtml:esc,openModal:modal,loadData,render,setPage:(page)=>{S.page=page;document.querySelectorAll('#nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));render();}});
 const operationsModule=createOperationsModule({state:S,escapeHtml:esc,render,setPage:(page)=>{S.page=page;document.querySelectorAll('#nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));render();}});
 const lotsModule=createLotsModule({state:S,supabase:sb,select:$,escapeHtml:esc,totalHa,latest,vigor,openModal:modal,openOrder:orderModal,loadData,render});
-const gisModule=createGisModule({state:S,supabase:sb,select:$,escapeHtml:esc,number,hectares,shortDate,latest,loadData,render,orderModal,openLotDetails:lot=>lotsModule.openDetails(lot)});
+const gisModule=createGisModule({state:S,supabase:sb,select:$,escapeHtml:esc,number,hectares,shortDate,latest,loadData,render,orderModal,openLotDetails:lot=>lotsModule.openDetails(lot),openModal:modal});
 
 init().catch(e=>{console.error(e);const m=$('#loginMsg');m.textContent='Error al iniciar: '+e.message;m.classList.remove('hidden')})
